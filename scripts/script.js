@@ -180,7 +180,9 @@ function operate(x, y, op) {
         } else {
         return x / y;
         }
-    }else if(op == 'pow'){
+    }
+    //Functions added.
+    else if(op == 'pow'){
         return Math.pow(x, y);
     } else if(op == 'square'){
         return x * x;
