@@ -2,7 +2,9 @@ html {
     text-align: center;
     font-family: monospace;
 }
-
+h1{
+    position: relative;
+}
 #calc {
     display: flex;
     min-height: 95vh;
@@ -20,8 +22,8 @@ html {
     border-radius: 4px;
     display: grid;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
-    gap: 2px;
+    grid-template-rows: minmax(100px, auto) repeat(6, 80px);
+    gap: 0px;
 }
 
 #display {
@@ -107,4 +109,15 @@ button {
 
 .percent:active {
     background-color: rgb(123, 189, 255);
+}
+
+.exponent {
+    background-color: #3dff1f;    
+}
+
+.exponent:focus {
+    background-color: #a0ff83;
+}
+#ln{
+    background-color: #FF8F1F;
 }
