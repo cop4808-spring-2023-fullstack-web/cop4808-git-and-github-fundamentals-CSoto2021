@@ -41,7 +41,9 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('exponent')) {
+                inputOperator(buttons[i].value);
+            }else if(buttons[i].classList.contains('clear'))
                 clearDisplay();
                 updateDisplay();
         }
@@ -99,7 +101,9 @@ function inputEquals() {
     //hitting equals doesn't display undefined before operate()
     if(firstOperator === null) {
         displayValue = displayValue;
-    } else if(secondOperator != null) {
+    } 
+    
+     else if(secondOperator != null) {
         //handles final result
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), secondOperator);
@@ -176,9 +180,18 @@ function operate(x, y, op) {
         } else {
         return x / y;
         }
+    }else if(op == 'pow'){
+        return Math.pow(x, y);
+    } else if(op == 'square'){
+        return x * x;
+    } else if(op == 'log'){
+        return Math.log(x);
+    } else if(op == 'sqroot'){
+        return Math.pow(x, 1/2);
     }
 }
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
+

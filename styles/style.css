@@ -111,13 +111,17 @@ button {
     background-color: rgb(123, 189, 255);
 }
 
-.exponent {
+#exp {
     background-color: #3dff1f;    
 }
 
-.exponent:focus {
+#exp:focus {
     background-color: #a0ff83;
 }
-#ln{
+#exp2{
     background-color: #FF8F1F;
+}
+#exp2:active{
+    background-color: #ffc183;
+    
 }
